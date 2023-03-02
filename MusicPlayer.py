@@ -122,22 +122,19 @@ def Event(): #total events buttons,mouse,end of audion file events
                         elif(button["key"]==pygame.K_d):
                             volume=(pygame.mixer.music.get_volume()+0.1)%1
                             pygame.mixer.music.set_volume(volume)
-                        #
-                        #Song forwarding
-                        #
-
-                        elif(button['key']==pygame.K_c):
-                            pointer+=1
-                            Song()
+                    
                         #
                         #Prevoius
                         #
-                        elif(button['key']==pygame.K_b):
+                        elif(button['key']==pygame.K_a):
                             pointer-=1
                             Song()
                         #
-                        #if song ended the moving forward
+                        #Song forwarding
                         #
+                        elif(button['key']==pygame.K_c):
+                            pointer+=1
+                            Song()
                         
         if num <= 0:
             status = "stopped"
